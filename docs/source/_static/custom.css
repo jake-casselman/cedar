@@ -1,0 +1,72 @@
+
+/* Custom tweaks for CEDAR: Climate & Energy Diagnostics for Applied Refrigeration docs with Furo theme */
+
+/* Logo styling */
+.sidebar-logo img {
+  max-height: 72px;
+}
+
+/* Code block styling */
+.highlight pre {
+  border-radius: 8px;
+  padding: 1.2em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading spacing */
+article h1, article h2, article h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
+}
+
+/* Improve table styling */
+table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom color scheme - subtle blue accents */
+:root {
+  --color-brand-primary: #2e86c1;
+  --color-brand-content: #3498db;
+}
+
+/* Navigation improvements */
+.sidebar-tree .current-page > .reference {
+  font-weight: 600;
+}
+
+/* Content area improvements */
+article {
+  max-width: none;
+}
+
+/* Footer styling */
+.footer {
+  border-top: 1px solid var(--color-background-border);
+  padding-top: 1rem;
+  margin-top: 2rem;
+}
+
+/* --- CEDAR: Climate & Energy Diagnostics for Applied Refrigeration docs polish --- */
+.index-card {
+  border-radius: 12px;
+  background-color: var(--color-background-secondary);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.index-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.main-grid {
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.admonition.tip {
+  border-radius: 10px;
+  background-color: #f0f9f0;
+}
