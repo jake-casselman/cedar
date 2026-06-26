@@ -227,15 +227,26 @@ This research is based upon work supported by the National Science Foundation un
 
 ## 🧠 Citation
 
-If you use **CEDAR** in your research, please cite:
+If you use **CEDAR** in your research, please cite **both** the software and the
+accompanying paper (see [`CITATION.cff`](CITATION.cff)):
 
-> Casselman, J. W. (2026). CEDAR: Climate & Energy Diagnostics for Applied Refrigeration (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.18274828
+**Software:**
+
+> Casselman, J. W., & Karamperidou, C. (2026). *CEDAR: Climate & Energy
+> Diagnostics for Applied Refrigeration* (v1.0.0). Zenodo.
+> <https://doi.org/10.5281/zenodo.18274828>
+
+**Paper:**
+
+> Casselman, J. W., & Karamperidou, C. (2026). *Efficiency-weighted cooling
+> degree days reveal opposing temperature and humidity effects on energy
+> demand.* Nature Communications. <https://doi.org/10.21203/rs.3.rs-8683958/v1>
+> (in press)
 
 **Corresponding authors:**
+
 - Jake W. Casselman — [jakewc@hawaii.edu](mailto:jakewc@hawaii.edu)
 - Christina Karamperidou — [ckaramp@hawaii.edu](mailto:ckaramp@hawaii.edu)
-
-*Paper citation will be added upon publication.*
 
 ---
 
@@ -253,21 +264,8 @@ uses, conveys, or makes CEDAR available over a network must preserve the CEDAR
 attribution notice in its credits / "Appropriate Legal Notices." See the
 [LICENSE](LICENSE) for the exact wording.
 
-**Academic citation.** If you use CEDAR in research, please cite **both** the
-software and the accompanying paper (see [`CITATION.cff`](CITATION.cff)):
-
-Software:
-
-> Casselman, J. W., & Karamperidou, C. (2026). *CEDAR: Climate & Energy
-> Diagnostics for Applied Refrigeration* (v1.0.0). Zenodo.
-> <https://doi.org/10.5281/zenodo.18274828>
-
-Paper:
-
-> Casselman, J. W., & Karamperidou, C. (2026). *Efficiency-weighted cooling
-> degree days reveal opposing temperature and humidity effects on energy
-> demand.* Nature Communications. <https://doi.org/10.21203/rs.3.rs-8683958/v1>
-> (in press)
+If you use CEDAR in research, please also cite it — see [Citation](#-citation)
+above.
 
 ---
 
