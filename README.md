@@ -5,11 +5,11 @@
 </p>
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18274828.svg)](https://doi.org/10.5281/zenodo.18274828)
-![PyPI](https://img.shields.io/badge/PyPI-coming_soon-lightgrey)
+[![PyPI](https://img.shields.io/pypi/v/cedar-toolkit.svg)](https://pypi.org/project/cedar-toolkit/)
 ![Python](https://img.shields.io/badge/python-3.10–3.13-blue)
 ![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)
 ![Code Style](https://img.shields.io/badge/code_style-PEP_8-blue)
-![Docs](https://img.shields.io/badge/docs-in_progress-lightgrey)
+[![Docs](https://readthedocs.org/projects/cedar-toolkit/badge/?version=latest)](https://cedar-toolkit.readthedocs.io/en/latest/)
 ![Paper](https://img.shields.io/badge/paper-in_review-blueviolet)
 
 > **CEDAR: Climate & Energy Diagnostics for Applied Refrigeration** — a Python library linking climate data to refrigeration physics and thermal system performance.
