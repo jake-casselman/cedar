@@ -7,7 +7,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18274828.svg)](https://doi.org/10.5281/zenodo.18274828)
 ![PyPI](https://img.shields.io/badge/PyPI-coming_soon-lightgrey)
 ![Python](https://img.shields.io/badge/python-3.10–3.13-blue)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)
 ![Code Style](https://img.shields.io/badge/code_style-PEP_8-blue)
 ![Docs](https://img.shields.io/badge/docs-in_progress-lightgrey)
 ![Paper](https://img.shields.io/badge/paper-in_review-blueviolet)
@@ -241,8 +241,33 @@ If you use **CEDAR** in your research, please cite:
 
 ## ⚖️ License
 
-Released under the [MIT License](LICENSE).  
-Free for research, educational, and commercial use with attribution.
+Released under the [GNU Affero General Public License v3.0](LICENSE).
+
+CEDAR is free software: you may use, modify, and redistribute it under the terms
+of the AGPL-3.0. If you run a modified version of CEDAR to provide a service over
+a network, you must make the complete corresponding source code of your modified
+version available to its users. See the [LICENSE](LICENSE) for full terms.
+
+**Attribution required.** Under an additional term (AGPL §7(b)), any work that
+uses, conveys, or makes CEDAR available over a network must preserve the CEDAR
+attribution notice in its credits / "Appropriate Legal Notices." See the
+[LICENSE](LICENSE) for the exact wording.
+
+**Academic citation.** If you use CEDAR in research, please cite **both** the
+software and the accompanying paper (see [`CITATION.cff`](CITATION.cff)):
+
+Software:
+
+> Casselman, J. W., & Karamperidou, C. (2026). *CEDAR: Climate & Energy
+> Diagnostics for Applied Refrigeration* (v1.0.0). Zenodo.
+> <https://doi.org/10.5281/zenodo.18274828>
+
+Paper:
+
+> Casselman, J. W., & Karamperidou, C. (2026). *Efficiency-weighted cooling
+> degree days reveal opposing temperature and humidity effects on energy
+> demand.* Nature Communications. <https://doi.org/10.21203/rs.3.rs-8683958/v1>
+> (in press)
 
 ---
 

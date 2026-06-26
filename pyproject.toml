@@ -6,7 +6,7 @@ readme = "README.md"
 authors = [
   { name = "Jake W. Casselman", email = "jake.w.casselman@gmail.com" }
 ]
-license = "MIT"
+license = "AGPL-3.0-or-later"
 license-files = ["LICENSE"]
 requires-python = ">=3.10"
 keywords = ["climate", "energy", "refrigeration", "COP", "thermal performance", "CoolProp"]

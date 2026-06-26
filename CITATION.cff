@@ -1,0 +1,52 @@
+cff-version: 1.2.0
+title: "CEDAR: Climate & Energy Diagnostics for Applied Refrigeration"
+message: >-
+  If you use this software, please cite BOTH the software (this file) and the
+  accompanying paper listed under `preferred-citation` below.
+type: software
+authors:
+  - given-names: Jake
+    name-particle: W.
+    family-names: Casselman
+    email: jake.w.casselman@gmail.com
+  - given-names: Christina
+    family-names: Karamperidou
+    email: ckaramp@hawaii.edu
+abstract: >-
+  CEDAR is a Python library linking climate data to refrigeration physics and
+  thermal system performance. It provides a modular, research-grade framework
+  for analyzing how climate conditions affect thermal system performance
+  (coefficient of performance, COP, and sensible heat ratio, SHR) across
+  refrigeration, HVAC, and broader cooling and heating applications.
+keywords:
+  - climate
+  - energy
+  - refrigeration
+  - COP
+  - thermal performance
+  - CoolProp
+repository-code: "https://github.com/jake-casselman/cedar"
+license: AGPL-3.0-or-later
+version: 1.0.0
+date-released: "2026-06-25"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.18274828
+    description: Concept DOI for all versions of CEDAR
+preferred-citation:
+  type: article
+  title: >-
+    Efficiency-weighted cooling degree days reveal opposing temperature and
+    humidity effects on energy demand
+  authors:
+    - given-names: Jake
+      name-particle: W.
+      family-names: Casselman
+    - given-names: Christina
+      family-names: Karamperidou
+  journal: "Nature Communications"
+  year: 2026
+  doi: 10.21203/rs.3.rs-8683958/v1
+  notes: >-
+    Preprint DOI; manuscript in typesetting at Nature Communications as of 2026.
+    Update with the final article DOI upon publication.
