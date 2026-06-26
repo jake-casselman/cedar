@@ -20,7 +20,7 @@ classifiers = [
   "Intended Audience :: Science/Research",
   "Topic :: Scientific/Engineering :: Atmospheric Science",
   "Topic :: Scientific/Engineering :: Physics",
-  "Topic :: Scientific/Engineering :: Energy",
+  "Topic :: Scientific/Engineering",
 ]
 
 # Modern, wheel-available, and cross-platform

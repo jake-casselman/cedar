@@ -75,3 +75,8 @@ src/cedar.egg-info/
 # Sphinx autosummary output (regenerated on build)
 docs/source/api/generated/
 docs/build/
+
+# Local secrets / tokens — never commit
+.env
+.env.local
+.env.*
