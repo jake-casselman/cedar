@@ -42,5 +42,6 @@ open build/html/index.html  # macOS
 
 ## Attribution
 
-CEDAR carries a required-attribution term (AGPL §7(b)); see [LICENSE](LICENSE).
+CEDAR carries a required-attribution term (AGPL §7(b)); see
+[LICENSE-ADDITIONAL-TERMS.md](LICENSE-ADDITIONAL-TERMS.md).
 Please do not remove existing copyright or attribution notices.

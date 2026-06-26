@@ -261,8 +261,8 @@ version available to its users. See the [LICENSE](LICENSE) for full terms.
 
 **Attribution required.** Under an additional term (AGPL §7(b)), any work that
 uses, conveys, or makes CEDAR available over a network must preserve the CEDAR
-attribution notice in its credits / "Appropriate Legal Notices." See the
-[LICENSE](LICENSE) for the exact wording.
+attribution notice in its credits / "Appropriate Legal Notices." See
+[LICENSE-ADDITIONAL-TERMS.md](LICENSE-ADDITIONAL-TERMS.md) for the exact wording.
 
 If you use CEDAR in research, please also cite it — see [Citation](#-citation)
 above.
