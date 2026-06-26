@@ -71,3 +71,7 @@ coverage.xml
 env
 *.egg-info
 src/cedar.egg-info/
+
+# Sphinx autosummary output (regenerated on build)
+docs/source/api/generated/
+docs/build/

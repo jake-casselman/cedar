@@ -16,7 +16,7 @@
 
 ---
 
-## 🔍 Overview
+## Overview
 
 The **CEDAR** platform provides a modular, research-grade framework for analyzing how **climate conditions affect thermal system performance** (COP and SHR) from refrigeration and HVAC to broader cooling and heating applications.  
 It bridges the gap between **climate science** and **energy engineering**, with runnable examples in `examples/` so you can learn by doing.
@@ -24,7 +24,7 @@ It bridges the gap between **climate science** and **energy engineering**, with 
 ---
 
 
-## 🚀 Current Features
+## Current Features
 
 - Compute **COP** for single-stage vapor-compression systems via **CoolProp**.  
 - Compute **Sensible Heat Ratio (SHR)** from temperature + RH or dew point.  
@@ -37,11 +37,11 @@ It bridges the gap between **climate science** and **energy engineering**, with 
 
 ---
 
-## 📦 Installation
+## Installation
 
-Stable (coming soon):
+Stable:
 ```bash
-pip install cedar
+pip install cedar-toolkit
 ```
 
 Development version:
@@ -54,7 +54,7 @@ pip install -e .[dev]
 ---
 
 
-## 📊 COP Reference Chart Example
+## COP Reference Chart Example
 
 <p align="center">
 <img src="docs/source/_static/cop_chart_example.png" alt="COP reference chart" width="75%" />
@@ -66,7 +66,7 @@ pip install -e .[dev]
 <img src="docs/source/_static/shr_temp_rh_map.png" alt="SHR vs temperature and relative humidity map" width="75%" />
 </p>
 
-## 🧩 Example usage
+## Example usage
 
 ```python
 from cedar.metrics.cop import SingleFluidCOP
@@ -152,7 +152,7 @@ print(ecop_vals)  # COP × SHR
 
 ---
 
-## 🧱 Project structure
+## Project structure
 
 ```text
 src/
@@ -173,7 +173,7 @@ src/
 
 ---
 
-## 🛠️ Local Development
+## Local Development
 
 ```bash
 git clone https://github.com/jake-casselman/cedar.git
@@ -205,11 +205,11 @@ export PKG_CONFIG_PATH="$(brew --prefix openblas)/lib/pkgconfig"
 
 ---
 
-## 📘 Documentation
+## Documentation
 
 ```bash
-# Install documentation dependencies
-pip install sphinx myst-parser sphinx-design furo sphinx-autodoc-typehints
+# Install documentation dependencies (docs extra)
+pip install -e .[docs]
 
 # Build and view
 cd docs
@@ -219,13 +219,13 @@ open build/html/index.html   # macOS
 
 ---
 
-## 🧾 Funding
+## Funding
 
 This research is based upon work supported by the National Science Foundation under award number EEC-2330175 for the Engineering Research Center EARTH.
 
 ---
 
-## 🧠 Citation
+## Citation
 
 If you use **CEDAR** in your research, please cite **both** the software and the
 accompanying paper (see [`CITATION.cff`](CITATION.cff)):
@@ -250,7 +250,7 @@ accompanying paper (see [`CITATION.cff`](CITATION.cff)):
 
 ---
 
-## ⚖️ License
+## License
 
 Released under the [GNU Affero General Public License v3.0](LICENSE).
 
@@ -269,7 +269,7 @@ above.
 
 ---
 
-## 🌎 Acknowledgments
+## Acknowledgments
 
 Developed by **Jake W. Casselman** as part of ongoing climate–energy research at the **University of Hawai‘i** and **[ERC Earth](https://erc-earth.ku.edu/)**.  
 

@@ -1,64 +1,129 @@
+/* Custom tweaks for CEDAR: Climate & Energy Diagnostics for Applied Refrigeration docs (Furo theme) */
 
-/* Custom tweaks for CEDAR: Climate & Energy Diagnostics for Applied Refrigeration docs with Furo theme */
+/* ---------------------------------------------------------------------------
+   Typography (fonts loaded via fonts.css, imported before this file)
+   --------------------------------------------------------------------------- */
+:root {
+  --font-stack: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-stack--monospace: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
 
-/* Logo styling */
+  /* CEDAR brand palette (sampled from the logo) */
+  --cedar-navy: #001931;
+  --cedar-navy-soft: #143052;
+  --cedar-orange: #e0712f;
+  --cedar-orange-bright: #f08a47;
+  --cedar-cream: #f8f5f1;
+
+  /* Consistent small radius everywhere ("rounded-sm") */
+  --cedar-radius: 4px;
+}
+
+/* ---------------------------------------------------------------------------
+   Brand colors for light + dark. Furo reads --color-brand-* for links/accents.
+   --------------------------------------------------------------------------- */
+:root {
+  --color-brand-primary: var(--cedar-navy);
+  --color-brand-content: var(--cedar-orange);
+  --cedar-shadow: rgba(0, 25, 49, 0.10);
+  --cedar-tip-bg: var(--cedar-cream);
+  --cedar-accent-border: var(--cedar-orange);
+}
+
+@media (prefers-color-scheme: dark) {
+  body:not([data-theme="light"]) {
+    --color-brand-primary: #cfe2f5;
+    --color-brand-content: var(--cedar-orange-bright);
+    --cedar-shadow: rgba(0, 0, 0, 0.45);
+    --cedar-tip-bg: #11223d;
+    --cedar-accent-border: var(--cedar-orange-bright);
+  }
+}
+
+body[data-theme="dark"] {
+  --color-brand-primary: #cfe2f5;
+  --color-brand-content: var(--cedar-orange-bright);
+  --cedar-shadow: rgba(0, 0, 0, 0.45);
+  --cedar-tip-bg: #11223d;
+  --cedar-accent-border: var(--cedar-orange-bright);
+}
+
+/* ---------------------------------------------------------------------------
+   Content width — fill the space to the right of the sidebar (not a narrow
+   column with a large empty right gutter).
+   --------------------------------------------------------------------------- */
+.content,
+article {
+  max-width: 62rem;
+}
+
+@media (min-width: 110rem) {
+  .content,
+  article {
+    max-width: 75rem;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Consistent small radius ("rounded-sm") on every rounded element
+   --------------------------------------------------------------------------- */
+.highlight pre,
+table,
+.index-card,
+.admonition,
+.sidebar-search,
+img.sidebar-logo,
+.highlight {
+  border-radius: var(--cedar-radius);
+}
+
+/* Logo */
 .sidebar-logo img {
   max-height: 72px;
+  border-radius: var(--cedar-radius);
 }
 
-/* Code block styling */
+/* Code blocks */
 .highlight pre {
-  border-radius: 8px;
   padding: 1.2em;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px var(--cedar-shadow);
 }
 
-/* Heading spacing */
+/* Headings */
 article h1, article h2, article h3 {
   margin-top: 1.5em;
   margin-bottom: 0.8em;
 }
 
-/* Improve table styling */
+/* Tables */
 table {
-  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px var(--cedar-shadow);
 }
 
-/* Custom color scheme - subtle blue accents */
-:root {
-  --color-brand-primary: #2e86c1;
-  --color-brand-content: #3498db;
-}
-
-/* Navigation improvements */
+/* Active nav item in CEDAR orange for a branded touch */
 .sidebar-tree .current-page > .reference {
   font-weight: 600;
+  color: var(--color-brand-content);
 }
 
-/* Content area improvements */
-article {
-  max-width: none;
-}
-
-/* Footer styling */
+/* Footer */
 .footer {
   border-top: 1px solid var(--color-background-border);
   padding-top: 1rem;
   margin-top: 2rem;
 }
 
-/* --- CEDAR: Climate & Energy Diagnostics for Applied Refrigeration docs polish --- */
+/* --- Landing-page cards --- */
 .index-card {
-  border-radius: 12px;
   background-color: var(--color-background-secondary);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid var(--color-background-border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .index-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px var(--cedar-shadow);
+  border-color: var(--cedar-accent-border);
 }
 
 .main-grid {
@@ -66,7 +131,9 @@ article {
   margin-top: 1.5rem;
 }
 
-.admonition.tip {
-  border-radius: 10px;
-  background-color: #f0f9f0;
+/* Admonitions: tint with the CEDAR cream/navy and an orange edge */
+.admonition.tip,
+.admonition.note {
+  background-color: var(--cedar-tip-bg);
+  border-left: 3px solid var(--cedar-accent-border);
 }

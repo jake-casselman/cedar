@@ -5,10 +5,10 @@
 - **3.10, 3.11, 3.12** (recommended)
 - **3.13** (works; may build SciPy from source on some Linux setups → slower CI)
 
-## Stable (coming soon)
+## Stable
 
 ```bash
-pip install cedar
+pip install cedar-toolkit
 ```
 
 ## Development install
@@ -25,7 +25,7 @@ pip install -e .[dev]
 Verify core dependencies:
 
 ```bash
-python -c "import CoolProp, numpy, scipy, matplotlib; print('✅ All good!')"
+python -c "import CoolProp, numpy, scipy, matplotlib; print('All dependencies imported successfully.')"
 ```
 
 ## Running tests

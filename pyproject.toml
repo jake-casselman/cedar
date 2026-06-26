@@ -1,5 +1,5 @@
 [project]
-name = "cedar"
+name = "cedar-toolkit"
 version = "1.0.0"
 description = "CEDAR: Climate & Energy Diagnostics for Applied Refrigeration — link climate data to refrigeration physics and thermal system performance."
 readme = "README.md"
@@ -23,18 +23,17 @@ classifiers = [
   "Topic :: Scientific/Engineering :: Energy",
 ]
 
-# 🧩 Modern, wheel-available, and cross-platform
+# Modern, wheel-available, and cross-platform
 dependencies = [
   "CoolProp>=6.4.3",
   "numpy>=1.26,<2.3",
   "scipy>=1.12,<1.14",
   "matplotlib>=3.7,<3.10",
-  "sphinx>=8.0,<9.0",
 ]
 
 [project.urls]
 Homepage = "https://github.com/jake-casselman/cedar"
-Documentation = "https://cedar.readthedocs.io/"
+Documentation = "https://cedar-toolkit.readthedocs.io/"
 Repository = "https://github.com/jake-casselman/cedar"
 
 [tool.setuptools.packages.find]
@@ -54,4 +53,10 @@ dev = [
   "pytest-cov",
   "build",
   "twine",
+]
+docs = [
+  "sphinx>=8.0,<9.0",
+  "myst-parser>=2",
+  "furo>=2024.0",
+  "sphinx-design>=0.5",
 ]

@@ -1,11 +1,11 @@
 ================================================================
-🌡️ CEDAR: Climate & Energy Diagnostics for Applied Refrigeration
+CEDAR: Climate & Energy Diagnostics for Applied Refrigeration
 ================================================================
 
 **CEDAR: Climate & Energy Diagnostics for Applied Refrigeration** connects *climate data* to *refrigeration physics and energy performance* for both **COP** and **SHR** workflows.
 
-.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.xxxxxxx.svg
-   :target: https://doi.org/10.5281/zenodo.xxxxxxx
+.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.18274828.svg
+   :target: https://doi.org/10.5281/zenodo.18274828
    :alt: DOI Badge
 
 
@@ -15,7 +15,7 @@
    :gutter: 2
    :class-container: main-grid
 
-   .. grid-item-card:: 🚀 Quick Start
+   .. grid-item-card:: Quick Start
       :link: getting-started
       :link-type: doc
       :shadow: md
@@ -24,7 +24,7 @@
 
       New to the platform? Learn installation, dependencies, and core concepts in minutes (COP + SHR).
 
-   .. grid-item-card:: 🧩 COP, SHR, ECOP, CDD/eCDD
+   .. grid-item-card:: COP, SHR, ECOP, CDD/eCDD
       :link: user-guide/cop-quickstart
       :link-type: doc
       :shadow: md
@@ -33,7 +33,7 @@
 
       Explore COP, SHR, ECOP (COP × SHR), and CDD/eCDD workflows with worked examples.
 
-   .. grid-item-card:: 📒 Examples (Learn by doing)
+   .. grid-item-card:: Examples (Learn by doing)
       :link: examples
       :link-type: doc
       :shadow: md
@@ -42,7 +42,7 @@
 
       Run the COP and SHR Python examples to generate charts and CSVs in `examples/outputs/`.
 
-   .. grid-item-card:: 🧪 Cedar walkthrough (notebook-based)
+   .. grid-item-card:: Cedar walkthrough (notebook-based)
       :link: user-guide/cedar-walkthrough
       :link-type: doc
       :shadow: md

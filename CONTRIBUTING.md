@@ -35,8 +35,7 @@ that you have the right to contribute the code under the CLA.
 Docs live under `docs/` (Sphinx + MyST):
 
 ```bash
-pip install -e .[dev]
-pip install sphinx sphinx-rtd-theme myst-parser
+pip install -e .[docs]
 cd docs && make html
 open build/html/index.html  # macOS
 ```

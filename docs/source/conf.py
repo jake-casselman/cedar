@@ -37,7 +37,7 @@ myst_heading_anchors = 3
 html_theme = "furo"
 html_logo = "_static/cedar_logo.png"
 html_static_path = ["_static"]
-html_css_files = ["custom.css"]
+html_css_files = ["fonts.css", "custom.css"]
 
 # Furo theme options
 html_theme_options = {

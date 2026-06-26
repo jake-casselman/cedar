@@ -66,7 +66,7 @@ class SingleFluidCOP:
         self.delta_t_min = float(delta_t_min)
 
         if self._verbose:
-            self._log.info(f"🔧 Building COP lookup for {fluid}")
+            self._log.info(f"Building COP lookup for {fluid}")
             self._log.info(f"   T_evap: {t_evap_k:.1f} K  ΔT_cond: {delta_t_cond:.1f} K")
 
         # Build dense table
@@ -75,7 +75,7 @@ class SingleFluidCOP:
 
         if self._verbose:
             valid = np.isfinite(self.cop_dense).sum()
-            self._log.info(f"✅ Table ready ({valid}/{self.T_dense.size} valid points)")
+            self._log.info(f"Table ready ({valid}/{self.T_dense.size} valid points)")
 
         # Interpolator
         self._interp = build_interpolator(self.T_dense, self.cop_dense)

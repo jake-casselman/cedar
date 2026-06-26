@@ -18,8 +18,7 @@ Thanks for considering a contribution!
 ## Building docs locally
 
 ```bash
-pip install -e .[dev]
-pip install sphinx sphinx-rtd-theme myst-parser
+pip install -e .[docs]
 cd docs && make html
 open build/html/index.html  # macOS
 ```
