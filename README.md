@@ -10,7 +10,7 @@
 ![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)
 ![Code Style](https://img.shields.io/badge/code_style-PEP_8-blue)
 [![Docs](https://readthedocs.org/projects/cedar-toolkit/badge/?version=latest)](https://cedar-toolkit.readthedocs.io/en/latest/)
-![Paper](https://img.shields.io/badge/paper-in_review-blueviolet)
+[![Paper](https://img.shields.io/badge/Nature_Communications-published-2ea44f)](https://doi.org/10.1038/s41467-026-75388-9)
 
 > **CEDAR: Climate & Energy Diagnostics for Applied Refrigeration** — a Python library linking climate data to refrigeration physics and thermal system performance.
 
@@ -240,8 +240,7 @@ accompanying paper (see [`CITATION.cff`](CITATION.cff)):
 
 > Casselman, J. W., & Karamperidou, C. (2026). *Efficiency-weighted cooling
 > degree days reveal opposing temperature and humidity effects on energy
-> demand.* Nature Communications. <https://doi.org/10.21203/rs.3.rs-8683958/v1>
-> (in press)
+> demand.* Nature Communications. <https://doi.org/10.1038/s41467-026-75388-9>
 
 **Corresponding authors:**
 

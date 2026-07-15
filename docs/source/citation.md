@@ -8,7 +8,7 @@ Casselman, J. W., & Karamperidou, C. (2026). CEDAR: Climate & Energy Diagnostics
 
 **Paper:**
 
-Casselman, J. W., & Karamperidou, C. (2026). Efficiency-weighted cooling degree days reveal opposing temperature and humidity effects on energy demand. Nature Communications. https://doi.org/10.21203/rs.3.rs-8683958/v1 (in press)
+Casselman, J. W., & Karamperidou, C. (2026). Efficiency-weighted cooling degree days reveal opposing temperature and humidity effects on energy demand. *Nature Communications*. https://doi.org/10.1038/s41467-026-75388-9
 
 Corresponding authors: Jake W. Casselman <jakewc@hawaii.edu>, Christina Karamperidou <ckaramp@hawaii.edu>
 

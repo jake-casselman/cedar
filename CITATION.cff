@@ -46,7 +46,6 @@ preferred-citation:
       family-names: Karamperidou
   journal: "Nature Communications"
   year: 2026
-  doi: 10.21203/rs.3.rs-8683958/v1
-  notes: >-
-    Preprint DOI; manuscript in typesetting at Nature Communications as of 2026.
-    Update with the final article DOI upon publication.
+  date-published: "2026-07-11"
+  doi: 10.1038/s41467-026-75388-9
+  url: "https://www.nature.com/articles/s41467-026-75388-9"

@@ -8,6 +8,10 @@ CEDAR: Climate & Energy Diagnostics for Applied Refrigeration
    :target: https://doi.org/10.5281/zenodo.18274828
    :alt: DOI Badge
 
+.. image:: https://img.shields.io/badge/Nature_Communications-published-2ea44f
+   :target: https://doi.org/10.1038/s41467-026-75388-9
+   :alt: Published in Nature Communications
+
 
 .. grid:: 1 2 2 2
    :margin: 2 2 2 2

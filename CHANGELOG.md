@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Replaced the paper's preprint metadata with the final Nature Communications
+  publication and DOI (`10.1038/s41467-026-75388-9`).
+
 ---
 
 ## [1.0.0] - 2026-01-16
