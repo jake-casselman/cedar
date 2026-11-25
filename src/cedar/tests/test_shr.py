@@ -5,7 +5,11 @@ Tests for SensibleHeatRatioModel and supporting SHR physics.
 import numpy as np
 import pytest
 
-from cedar.physics.shr import compute_relative_humidity, sensible_heat_ratio
+from cedar.physics.shr import (
+    compute_relative_humidity,
+    sensible_heat_ratio,
+    sensible_heat_ratio_components,
+)
 from cedar.metrics.shr import SensibleHeatRatioModel
 
 
@@ -52,3 +56,37 @@ def test_shr_raises_when_both_inputs_provided():
     model = SensibleHeatRatioModel()
     with pytest.raises(ValueError):
         model.shr(295.0, rh_array=0.5, dewpoint_array=283.0)
+
+
+def test_sensible_heat_ratio_components_match_shr():
+    components = sensible_heat_ratio_components(295.0, 0.4)
+    assert set(components) == {
+        "rh_in",
+        "p_v_in",
+        "w_in",
+        "p_v_out",
+        "w_out",
+        "sensible_heat",
+        "latent_heat",
+        "total_heat",
+        "shr",
+    }
+    assert np.isclose(components["shr"], sensible_heat_ratio(295.0, 0.4), atol=1e-12)
+    assert np.isclose(
+        components["shr"],
+        components["sensible_heat"] / components["total_heat"],
+        atol=1e-12,
+    )
+
+
+def test_model_components_support_dewpoint_path():
+    model = SensibleHeatRatioModel()
+    temps = np.array([295.0, 300.0])
+    dew = np.array([283.15, 288.15])
+
+    components = model.components(temps, dewpoint_array=dew)
+    shr = model.shr(temps, dewpoint_array=dew)
+
+    assert components["shr"].shape == temps.shape
+    assert np.allclose(components["shr"], shr, atol=1e-12)
+    assert np.all((components["rh_in"] >= 0) & (components["rh_in"] <= 1))

@@ -97,6 +97,63 @@ def sensible_heat_ratio(
     return np.clip(shr, 0.0, 1.0)
 
 
+def sensible_heat_ratio_components(
+    t_in_k: ArrayLike,
+    rh_in: ArrayLike,
+    *,
+    p_atm: float = 101325.0,
+    t_evap_k: float = 273.15,
+    approach_temp: float = 1.0,
+    C_p: float = 1020.05,
+    H_fg: float = 2.501e6,
+    rh_out: float = 1.0,
+) -> dict[str, np.ndarray]:
+    """
+    Compute SHR and its physical component terms.
+
+    Returns
+    -------
+    dict
+        Mapping containing:
+        - ``rh_in``: inlet relative humidity [0, 1]
+        - ``p_v_in``: inlet partial vapor pressure [Pa]
+        - ``w_in``: inlet humidity ratio [kg/kg dry air]
+        - ``p_v_out``: outlet partial vapor pressure [Pa]
+        - ``w_out``: outlet humidity ratio [kg/kg dry air]
+        - ``sensible_heat``: sensible heat term [J/kg dry air]
+        - ``latent_heat``: latent heat term [J/kg dry air]
+        - ``total_heat``: total heat term [J/kg dry air]
+        - ``shr``: sensible heat ratio [0, 1]
+    """
+    t_in_k = np.asarray(t_in_k, dtype=float)
+    rh_in = np.asarray(rh_in, dtype=float)
+
+    t_out_k = t_evap_k + approach_temp
+
+    p_v_in = _p_v(rh_in, t_in_k)
+    w_in = _humidity_ratio(p_v_in, p_atm)
+
+    p_v_out = _p_v(np.minimum(rh_out, 0.999), t_out_k)
+    w_out = _humidity_ratio(p_v_out, p_atm)
+
+    sensible_heat = C_p * (t_in_k - t_out_k)
+    latent_heat = H_fg * np.maximum(w_in - w_out, 0.0)
+    total_heat = sensible_heat + latent_heat
+    shr = np.clip(sensible_heat / total_heat, 0.0, 1.0)
+
+    return {
+        "rh_in": rh_in,
+        "p_v_in": p_v_in,
+        "w_in": w_in,
+        "p_v_out": np.asarray(p_v_out, dtype=float),
+        "w_out": np.asarray(w_out, dtype=float),
+        "sensible_heat": sensible_heat,
+        "latent_heat": latent_heat,
+        "total_heat": total_heat,
+        "shr": shr,
+    }
+
+
 def sensible_heat_ratio_from_dewpoint(
     t_in: ArrayLike,
     dewpoint: ArrayLike,

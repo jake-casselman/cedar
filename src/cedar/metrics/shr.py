@@ -18,6 +18,7 @@ from scipy.interpolate import RegularGridInterpolator
 from cedar.physics.shr import (
     compute_relative_humidity,
     sensible_heat_ratio,
+    sensible_heat_ratio_components,
 )
 
 # Physical constants for default assumptions
@@ -172,6 +173,41 @@ class SensibleHeatRatioModel:
             return self.interpolate_shr(T_array, rh_array)
 
         return sensible_heat_ratio(
+            T_array,
+            rh_array,
+            p_atm=self.p_atm,
+            t_evap_k=self.t_evap_k,
+            approach_temp=self.approach_temp,
+            C_p=self.C_p,
+            H_fg=self.H_fg,
+            rh_out=self.rh_out,
+        )
+
+    def components(
+        self,
+        T_array: ArrayLike,
+        *,
+        rh_array: Optional[ArrayLike] = None,
+        dewpoint_array: Optional[ArrayLike] = None,
+    ) -> dict[str, np.ndarray]:
+        """
+        Compute SHR and expose the physical component terms.
+
+        This is an opt-in diagnostic API. The default ``shr()`` method continues
+        to return only SHR values.
+        """
+        if (rh_array is None and dewpoint_array is None) or (
+            rh_array is not None and dewpoint_array is not None
+        ):
+            raise ValueError("Provide exactly one of rh_array or dewpoint_array.")
+
+        T_array = np.asarray(T_array, dtype=float)
+        if dewpoint_array is not None:
+            rh_array = compute_relative_humidity(T_array, dewpoint_array)
+        else:
+            rh_array = np.asarray(rh_array, dtype=float)
+
+        return sensible_heat_ratio_components(
             T_array,
             rh_array,
             p_atm=self.p_atm,
